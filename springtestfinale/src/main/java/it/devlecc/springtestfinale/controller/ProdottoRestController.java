@@ -37,7 +37,7 @@ public class ProdottoRestController {
         return repository.findById(id)
                 .orElseThrow(() -> new ProdottoNonTrovato(id));
     }
-    @PutMapping("/prodotti/{id}")
+        @PutMapping("/prodotti/{id}")
     Prodotto aggiornaProdotto(@RequestBody Prodotto prodotto, @PathVariable Long id){
         return repository.save(prodotto);
     }

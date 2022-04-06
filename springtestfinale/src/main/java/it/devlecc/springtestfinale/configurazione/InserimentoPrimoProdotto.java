@@ -23,7 +23,7 @@ public class InserimentoPrimoProdotto {
         return args -> {
 
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-            SimpleDateFormat dateFormatPerScadenza = new SimpleDateFormat("yyyy-MM-dd");
+            SimpleDateFormat dateFormatPerScadenza = new SimpleDateFormat("dd-MM-yyyy");
 
             Date datadiacquisto = dateFormat.parse("06-04-2021");
             Date datadiscadenza = dateFormatPerScadenza.parse("06-05-2021");

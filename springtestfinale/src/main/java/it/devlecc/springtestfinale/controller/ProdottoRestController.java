@@ -54,7 +54,7 @@ public class ProdottoRestController {
             @RequestParam(name = "dataa") @DateTimeFormat(pattern = "dd-MM-yyyy")
             Date dataa
             ){
-        return repository.findByDatadiacquistoBetween(datada, dataa);
+        return repository.findByDataDiAcquistoBetween(datada, dataa);
     }
     @GetMapping("/prodotti/ricercatradatadiscadenza")
     public List<Prodotto> ricercaProdottiTraDateDiScadenza(
@@ -63,7 +63,7 @@ public class ProdottoRestController {
             @RequestParam(name = "dataa") @DateTimeFormat(pattern = "dd-MM-yyyy")
                     Date dataa
     ){
-        return repository.findByDatadiscadenzaBetween(datada, dataa);
+        return repository.findByDataDiScadenzaBetween(datada, dataa);
     }
     @GetMapping("/prodotto/ricercabyprezzo")
     public List<Prodotto> ricercaProdottoConPrezzo(
@@ -78,6 +78,12 @@ public class ProdottoRestController {
     ){
         return repository.findByPrezzoLessThan(prezzoMax);
     }
+    @GetMapping("/prodotto/ricercabyprezzomin")
+    public List<Prodotto> ricercaProdottoConPrezzoMinimo(
+            @RequestParam(name = "prezzomin") float prezzoMin
+    ){
+        return repository.findByPrezzoGreaterThan(prezzoMin);
+    }
 
     @GetMapping("/prodotto/ricercabyranking")
     public List<Prodotto> ricercaProdottoConRanking(
@@ -86,8 +92,8 @@ public class ProdottoRestController {
     ){
         return repository.findByRankingBetween(min, max);
     }
-    @GetMapping("/prodotto/ricercabyranking")
-    public List<Prodotto> ricercaProdottoConRanking(
+    @GetMapping("/prodotto/ricercabyrankingmax")
+    public List<Prodotto> ricercaProdottoConRankingMax(
             @RequestParam(name = "max") float max
     ){
         return repository.findByRankingLessThan(max);

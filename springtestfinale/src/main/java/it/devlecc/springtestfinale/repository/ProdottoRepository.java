@@ -7,10 +7,11 @@ import java.util.Date;
 import java.util.List;
 
 public interface ProdottoRepository extends JpaRepository<Prodotto, Long> {
-        List<Prodotto> findByDatadiacquistoBetween(Date datada, Date dataa);
-        List<Prodotto> findByDatadiscadenzaBetween(Date datada, Date dataa);
+        List<Prodotto> findByDataDiAcquistoBetween (Date datada, Date dataa);
+        List<Prodotto> findByDataDiScadenzaBetween (Date datada, Date dataa);
         List<Prodotto> findByPrezzoBetween(float prezzoMin, float prezzoMax);
         List<Prodotto> findByPrezzoLessThan(float prezzoMax);
+        List<Prodotto> findByPrezzoGreaterThan(float prezzoMin);
         List<Prodotto> findByRankingBetween(float min, float max);
         List<Prodotto> findByRankingLessThan(float max);
 }

@@ -23,18 +23,23 @@ public class InserimentoPrimoProdotto {
         return args -> {
 
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+            SimpleDateFormat dateFormatPerScadenza = new SimpleDateFormat("yyyy-MM-dd");
 
             Date datadiacquisto = dateFormat.parse("06-04-2021");
-            Prodotto p1 = new Prodotto("Mouse",datadiacquisto, 20.34f);
+            Date datadiscadenza = dateFormatPerScadenza.parse("06-05-2021");
+            Prodotto p1 = new Prodotto("Pane",datadiacquisto,datadiscadenza, 5.34f);
 
             datadiacquisto = dateFormat.parse("23-11-2021");
-            Prodotto p2 = new Prodotto("Tablet",datadiacquisto, 149.99f);
+            datadiscadenza = dateFormatPerScadenza.parse("07-12-2021");
+            Prodotto p2 = new Prodotto("Latte", datadiacquisto, datadiscadenza,23.99f);
 
             datadiacquisto = dateFormat.parse("11-01-2009");
-            Prodotto p3 = new Prodotto("Keyword",datadiacquisto, 54.99f);
+            datadiscadenza = dateFormatPerScadenza.parse("01-02-2009");
+            Prodotto p3 = new Prodotto("Uova",datadiacquisto,datadiscadenza,15.99f);
 
             datadiacquisto = dateFormat.parse("20-12-2018");
-            Prodotto p4 = new Prodotto("Cpu",datadiacquisto, 1749.34f);
+            datadiscadenza = dateFormatPerScadenza.parse("20-05-2019");
+            Prodotto p4 = new Prodotto("Cioccolato",datadiacquisto, datadiscadenza,9.34f);
 
             List<Prodotto> prodotti = new ArrayList<>();
             prodotti.add(p2);
@@ -55,11 +60,12 @@ public class InserimentoPrimoProdotto {
                 logger.info("Nome Del Prodotto: "+p.getNomeDelProdotto());
                 logger.info("Prezzo Del Prodotto: "+p.getPrezzo());
                 logger.info("Data di Acquisto del Prodotto: "+p.getDataDiAcquisto());
+                logger.info("Data di Scadenza del Prodotto: "+p.getDataDiScadenza());
                 logger.warn(p.toString());
             }
 
-            Prodotto prodottoConId1 = repository.findById(Long.valueOf(1)).get();
-            logger.info("Prodotto con id 1: "+prodottoConId1.getNomeDelProdotto());
+            /*Prodotto prodottoConId1 = repository.findById(Long.valueOf(1)).get();
+            logger.info("Prodotto con id 1: "+prodottoConId1.getNomeDelProdotto());*/
 
         };
     }

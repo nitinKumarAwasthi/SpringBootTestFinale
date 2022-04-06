@@ -27,6 +27,12 @@ public class Prodotto {
         this.nomeDelProdotto = nomeDelProdotto;
     }
 
+    public Prodotto(String nomeDelProdotto, Date dataDiAcquisto, Date dataDiScadenza, float prezzo) {
+        this.nomeDelProdotto = nomeDelProdotto;
+        this.dataDiAcquisto = dataDiAcquisto;
+        this.dataDiScadenza = dataDiScadenza;
+        this.prezzo = prezzo;
+    }
 
     public Prodotto(Long id, String nomeDelProdotto, Date dataDiAcquisto, Date dataDiScadenza, float prezzo, float ranking) {
         this.id = id;

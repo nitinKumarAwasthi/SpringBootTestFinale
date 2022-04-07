@@ -56,6 +56,20 @@ public class ProdottoRestController {
             ){
         return repository.findByDataDiAcquistoBetween(datada, dataa);
     }
+    @GetMapping("/prodotti/ricercatradatadiacquistoGreaterthan")
+    public List<Prodotto> ricercaProdottiTraDateDiAcquistoPiùGrandeDi(
+            @RequestParam(name = "acquistopiùgrandedi") @DateTimeFormat(pattern = "dd-MM-yyyy")
+                    Date acquistoPiùGrandeDi
+    ){
+        return repository.findByDataDiAcquistoGreaterThan(acquistoPiùGrandeDi);
+    }
+    @GetMapping("/prodotti/ricercatradatadiacquistolessthan")
+    public List<Prodotto> ricercaProdottiTraDateDiAcquistoPiùPiccoloDi(
+            @RequestParam(name = "acquistopiùpiccolodi") @DateTimeFormat(pattern = "dd-MM-yyyy")
+                    Date acquistoPiùPiccoloDi
+    ){
+        return repository.findByDataDiAcquistoLessThan(acquistoPiùPiccoloDi);
+    }
     @GetMapping("/prodotti/ricercatradatadiscadenza")
     public List<Prodotto> ricercaProdottiTraDateDiScadenza(
             @RequestParam(name = "datada") @DateTimeFormat(pattern = "dd-MM-yyyy")
@@ -64,6 +78,20 @@ public class ProdottoRestController {
                     Date dataa
     ){
         return repository.findByDataDiScadenzaBetween(datada, dataa);
+    }
+    @GetMapping("/prodotti/ricercatradatadiscadenzagreaterthan")
+    public List<Prodotto> ricercaProdottiTraDateDiScadenzaPiùGrandeDi(
+            @RequestParam(name = "scadenzapiùgrandedi") @DateTimeFormat(pattern = "dd-MM-yyyy")
+                    Date scadenzaPiùGrandeDi
+    ){
+        return repository.findByDataDiScadenzaGreaterThan(scadenzaPiùGrandeDi);
+    }
+    @GetMapping("/prodotti/ricercatradatadiscadenzalessthan")
+    public List<Prodotto> ricercaProdottiTraDateDiScadenzaPiùPiccoloDi(
+            @RequestParam(name = "scadenzapiùpiccolodi") @DateTimeFormat(pattern = "dd-MM-yyyy")
+                    Date scadenzaPiùPiccoloDi
+    ){
+        return repository.findByDataDiScadenzaLessThan(scadenzaPiùPiccoloDi);
     }
     @GetMapping("/prodotto/ricercabyprezzo")
     public List<Prodotto> ricercaProdottoConPrezzo(
@@ -97,6 +125,12 @@ public class ProdottoRestController {
             @RequestParam(name = "max") float max
     ){
         return repository.findByRankingLessThan(max);
+    }
+    @GetMapping("/prodotto/ricercabyrankingmin")
+    public List<Prodotto> ricercaProdottoConRankingMin(
+            @RequestParam(name = "min") float min
+    ){
+        return repository.findByRankingGreaterThan(min);
     }
 
     @PostMapping("/caricafile")

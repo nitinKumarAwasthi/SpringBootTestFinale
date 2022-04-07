@@ -9,7 +9,7 @@ Questo è un applicazione fatta in java usando il framework **_Spring Boot_** pe
 [![Build Status](https://travis-ci.org/codecentric/springboot-sample-app.svg?branch=master)](https://travis-ci.org/codecentric/springboot-sample-app)
 [![Coverage Status](https://coveralls.io/repos/github/codecentric/springboot-sample-app/badge.svg?branch=master)](https://coveralls.io/github/codecentric/springboot-sample-app?branch=master)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
-
+<hr />
 ## Requirements
 
 For building and running the application you need:
@@ -18,24 +18,25 @@ For building and running the application you need:
 - [Maven ](https://maven.apache.org)
 - [![Run in Postman](https://s3.amazonaws.com/postman-static/run-button.png)](https://app.getpostman.com/run-collection/5d9ae743a661a15d64bb)
 
-
+<hr />
 ## Proprietà
 Appicazione basata su Spring boot con le seguenti funzioni:
 - H2 in memoria
 - Restfull API
-
+<hr />
 ## Installation
 
 Use this link [clickme](https://spring.io/tools) to install Spring Boot.
 ```bash
-clickme install Spring Boot
+ installing Spring Boot
 ```
+<hr />
 
 ## Content 
-**FIRST DEBUG APPLICATION TO GET TO THE LINK**
+**PRIMA [--CLICCA PER CLONARE IL MIO REPOSITORY--](https://github.com/nitinKumarAwasthi/SpringBootTestFinale) E ESEGUI APPLICAZIONE PER APRIRE I LINK RIPORTATI NELLA TABELLA** <br />
 **_CREDENTIALS: <br />
 Username:  user <br />
-Password:  user_**
+Password:  user_** 
 
 | Query    |                                                     Url                                                      |                Funzionamento |
 |:---------|:------------------------------------------------------------------------------------------------------------:|-----------------------------:|
@@ -57,9 +58,11 @@ Password:  user_**
 | `Post`   |                                       http://localhost:8080/caricafile                                       |                   CaricaFile |
 | `Put`    |                                       http://localhost:8080/prodotti/7                                       |              AggionaProdotto |
 | `Delete` |                                       http://localhost:8080/prodotto/5                                       |              EliminaProdotto |
+<hr />
 
-## Link Utili
+## Altri Link Utili
 [spring initializr](https://start.spring.io/)
+<hr />
 
 ## Copyright
 

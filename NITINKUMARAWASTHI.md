@@ -31,7 +31,7 @@ Use this link [clickme](https://spring.io/tools) to install Spring Boot.
 clickme install Spring Boot
 ```
 
-##Content
+## Content 
 **FIRST DEBUG APPLICATION TO GET TO THE LINK**
 **_CREDENTIALS: <br />
 Username:  user <br />

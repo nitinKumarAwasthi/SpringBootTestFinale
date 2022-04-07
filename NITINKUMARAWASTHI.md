@@ -32,6 +32,11 @@ clickme install Spring Boot
 ```
 
 ##Content
+**FIRST DEBUG APPLICATION TO GET TO THE LINK**
+**_CREDENTIALS: <br />
+Username:  user <br />
+Password:  user_**
+
 | Query    |                                                      Url                                                      |                Funzionamento |
 |:---------|:-------------------------------------------------------------------------------------------------------------:|-----------------------------:|
 | `Get`    |                                        http://localhost:8080/prodotti                                         |          StampaTuttiProdotti |
